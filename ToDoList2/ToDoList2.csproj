@@ -124,13 +124,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Model\Pictures\Icon.ico" />
-    <Content Include="Model\RegisterDB.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Model\RegisterDB_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>RegisterDB.mdf</DependentUpon>
-    </Content>
     <Content Include="RegisterDB.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
