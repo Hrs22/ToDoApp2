@@ -70,9 +70,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controller\RegisterController.cs" />
-    <Compile Include="Model\RegisterModel.cs" />
-    <Compile Include="Model\RegisterTable.cs" />
+    <Compile Include="Controller\LoginController.cs" />
     <Compile Include="View\LoginView.cs">
       <SubType>Form</SubType>
     </Compile>

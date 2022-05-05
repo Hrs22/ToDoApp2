@@ -7,9 +7,23 @@ using ToDoList2.Model;
 
 namespace ToDoList2.Controller
 {
-    internal class RegisterController
+     class LoginController
     {
-        public List<RegisterTable> GetAll()
+
+        public bool IsUserLogged(string username, string password)
+        {
+            using(Enti log = new RegisterModel())
+            {
+                bool isLogged = false;
+                foreach (var user in log.)
+                {
+
+                }
+            }
+        }
+
+
+        /* public List<RegisterTable> GetAll()
         {
             using (RegisterModel model = new RegisterModel())
             {
@@ -32,6 +46,6 @@ namespace ToDoList2.Controller
                 reg.RegisterTables.Add(r);
                 reg.SaveChanges();
             }
-        }
+        }*/
     }
 }
