@@ -17,20 +17,5 @@ namespace ToDoList2.View
         {
             InitializeComponent();
         }
-
-        private void LoginView_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lbl1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btn1_Click(object sender, EventArgs e)
-        {
-           
-        }
     }
 }

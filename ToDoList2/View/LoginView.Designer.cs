@@ -81,7 +81,6 @@
             this.btn1.TabIndex = 28;
             this.btn1.Text = "Login ";
             this.btn1.UseVisualStyleBackColor = false;
-            this.btn1.Click += new System.EventHandler(this.btn1_Click);
             // 
             // lbl4
             // 
@@ -133,7 +132,6 @@
             this.lbl1.Size = new System.Drawing.Size(106, 47);
             this.lbl1.TabIndex = 23;
             this.lbl1.Text = "Login";
-            this.lbl1.Click += new System.EventHandler(this.lbl1_Click);
             // 
             // btn2
             // 
@@ -166,7 +164,6 @@
             this.Name = "LoginView";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LoginView";
-            this.Load += new System.EventHandler(this.LoginView_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
