@@ -81,6 +81,7 @@
             this.btn1.TabIndex = 28;
             this.btn1.Text = "Login ";
             this.btn1.UseVisualStyleBackColor = false;
+            this.btn1.Click += new System.EventHandler(this.btn1_Click);
             // 
             // lbl4
             // 
@@ -127,7 +128,7 @@
             // 
             this.lbl1.AutoSize = true;
             this.lbl1.Font = new System.Drawing.Font("Nirmala UI", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl1.Location = new System.Drawing.Point(123, 13);
+            this.lbl1.Location = new System.Drawing.Point(151, 32);
             this.lbl1.Name = "lbl1";
             this.lbl1.Size = new System.Drawing.Size(106, 47);
             this.lbl1.TabIndex = 23;
@@ -137,9 +138,9 @@
             // 
             this.btn2.BackColor = System.Drawing.Color.Transparent;
             this.btn2.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn2.Location = new System.Drawing.Point(179, 369);
+            this.btn2.Location = new System.Drawing.Point(179, 375);
             this.btn2.Name = "btn2";
-            this.btn2.Size = new System.Drawing.Size(222, 64);
+            this.btn2.Size = new System.Drawing.Size(222, 52);
             this.btn2.TabIndex = 33;
             this.btn2.Text = "Don\'t have one? Create one";
             this.btn2.UseVisualStyleBackColor = false;

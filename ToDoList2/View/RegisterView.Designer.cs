@@ -45,7 +45,7 @@
             // 
             this.lbl1.AutoSize = true;
             this.lbl1.Font = new System.Drawing.Font("Nirmala UI", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl1.Location = new System.Drawing.Point(124, 9);
+            this.lbl1.Location = new System.Drawing.Point(121, 34);
             this.lbl1.Name = "lbl1";
             this.lbl1.Size = new System.Drawing.Size(154, 47);
             this.lbl1.TabIndex = 0;
@@ -101,7 +101,7 @@
             // 
             this.btn1.BackColor = System.Drawing.Color.Transparent;
             this.btn1.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn1.Location = new System.Drawing.Point(14, 375);
+            this.btn1.Location = new System.Drawing.Point(26, 375);
             this.btn1.Name = "btn1";
             this.btn1.Size = new System.Drawing.Size(140, 52);
             this.btn1.TabIndex = 18;
@@ -113,9 +113,9 @@
             // 
             this.btn2.BackColor = System.Drawing.Color.Transparent;
             this.btn2.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn2.Location = new System.Drawing.Point(191, 369);
+            this.btn2.Location = new System.Drawing.Point(193, 375);
             this.btn2.Name = "btn2";
-            this.btn2.Size = new System.Drawing.Size(210, 64);
+            this.btn2.Size = new System.Drawing.Size(191, 52);
             this.btn2.TabIndex = 19;
             this.btn2.Text = "Have account? Login now!";
             this.btn2.UseVisualStyleBackColor = false;
