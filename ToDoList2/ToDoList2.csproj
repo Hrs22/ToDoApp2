@@ -70,9 +70,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controller\RegisterController.cs" />
-    <Compile Include="Model\RegisterModel.cs" />
-    <Compile Include="Model\RegisterTable.cs" />
+    <Compile Include="Controller\GlobalData.cs" />
+    <Compile Include="Controller\LoginController.cs" />
+    <Compile Include="Model\RegisterModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RegisterModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\RegisterModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RegisterModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\RegisterModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RegisterModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Model\RegisterTable.cs">
+      <DependentUpon>RegisterModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\TaskTable.cs">
+      <DependentUpon>RegisterModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="View\LoginView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -108,6 +128,13 @@
     <EmbeddedResource Include="View\RegisterView.resx">
       <DependentUpon>RegisterView.cs</DependentUpon>
     </EmbeddedResource>
+    <EntityDeploy Include="Model\RegisterModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>RegisterModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Model\RegisterModel.edmx.diagram">
+      <DependentUpon>RegisterModel.edmx</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -124,6 +151,16 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Model\Pictures\Icon.ico" />
+    <Content Include="Model\RegisterModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>RegisterModel.edmx</DependentUpon>
+      <LastGenOutput>RegisterModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model\RegisterModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>RegisterModel.edmx</DependentUpon>
+      <LastGenOutput>RegisterModel.cs</LastGenOutput>
+    </Content>
     <Content Include="RegisterDB.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -132,7 +169,9 @@
       <DependentUpon>RegisterDB.mdf</DependentUpon>
     </Content>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
       <Visible>False</Visible>
