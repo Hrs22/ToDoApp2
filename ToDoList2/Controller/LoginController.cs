@@ -1,4 +1,6 @@
-﻿using ToDoList2.Model;
+﻿using System.Collections.Generic;
+using System.Linq;
+using ToDoList2.Model;
 
 namespace ToDoList2.Controller
 {
@@ -21,6 +23,19 @@ namespace ToDoList2.Controller
                 return isLogged;
             }
         }
-
+        public void Register(string username, string password, string email)
+        {
+            using (RegisterDBEntities log = new RegisterDBEntities())
+            {
+                RegisterTable user = new RegisterTable();
+                user.username = username;
+                user.password = password;
+                user.email = email;
+                List<RegisterTable> users = log.RegisterTables.ToList();
+                user.Id = users.ToString().LastOrDefault() + 1;
+                log.RegisterTables.Add(user);
+                log.SaveChanges();
+            }
+        }   
     }
 }

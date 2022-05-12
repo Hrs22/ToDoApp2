@@ -7,33 +7,36 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ToDoList2.Controller;
 
 namespace ToDoList2.View
 {
     public partial class RegisterView : Form
     {
+        LoginController loginController = new LoginController();
         public RegisterView()
         {
             InitializeComponent();
         }
         private void btn1_Click(object sender, EventArgs e)
         {
-            if (txtbox1.Text == "" && txtbox2.Text == "" && txtBox3.Text == "")
+            if (txtUsername.Text == "" && txtPassword.Text == "" && txtEmail.Text == "")
             {
                 MessageBox.Show("Fields are empty!", "Registration Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 
             }
             else if (true)
             {
+                loginController.Register(txtUsername.Text, txtPassword.Text, txtEmail.Text);
                 MessageBox.Show("Account succsessfully created!");
                 MainView mv = new MainView();
                 this.Hide();
                 mv.ShowDialog();
                 this.Close();
 
-                txtbox1.Text = "";
-                txtbox2.Text = "";
-                txtBox3.Text = "";
+                txtUsername.Text = "";
+                txtPassword.Text = "";
+                txtEmail.Text = "";
             }
         }
         private void btn2_Click(object sender, EventArgs e)
@@ -47,11 +50,11 @@ namespace ToDoList2.View
         {
             if (chkbox1.Checked)
             {
-                txtbox2.PasswordChar = '\0';
+                txtPassword.PasswordChar = '\0';
             }
             else
             {
-                txtbox2.PasswordChar = '•';
+                txtPassword.PasswordChar = '•';
             }   
         }
     }
