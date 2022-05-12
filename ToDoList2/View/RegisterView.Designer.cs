@@ -50,7 +50,6 @@
             this.lbl1.Size = new System.Drawing.Size(154, 47);
             this.lbl1.TabIndex = 0;
             this.lbl1.Text = "Register ";
-            this.lbl1.Click += new System.EventHandler(this.lbl1_Click);
             // 
             // lbl2
             // 
@@ -62,7 +61,6 @@
             this.lbl2.TabIndex = 12;
             this.lbl2.Text = "Enter your username";
             this.lbl2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lbl2.Click += new System.EventHandler(this.lbl2_Click);
             // 
             // txtbox1
             // 
@@ -72,7 +70,6 @@
             this.txtbox1.Name = "txtbox1";
             this.txtbox1.Size = new System.Drawing.Size(200, 19);
             this.txtbox1.TabIndex = 13;
-            this.txtbox1.TextChanged += new System.EventHandler(this.txtbox1_TextChanged);
             // 
             // lbl3
             // 
@@ -83,7 +80,6 @@
             this.lbl3.Size = new System.Drawing.Size(201, 30);
             this.lbl3.TabIndex = 14;
             this.lbl3.Text = "Enter your password";
-            this.lbl3.Click += new System.EventHandler(this.lbl3_Click);
             // 
             // lbl4
             // 
@@ -95,7 +91,6 @@
             this.lbl4.TabIndex = 16;
             this.lbl4.Text = "   Enter your email";
             this.lbl4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lbl4.Click += new System.EventHandler(this.lbl4_Click);
             // 
             // btn1
             // 
@@ -130,7 +125,6 @@
             this.txtbox2.PasswordChar = '•';
             this.txtbox2.Size = new System.Drawing.Size(200, 19);
             this.txtbox2.TabIndex = 20;
-            this.txtbox2.TextChanged += new System.EventHandler(this.txtbox2_TextChanged);
             // 
             // txtBox3
             // 
@@ -140,7 +134,6 @@
             this.txtBox3.Name = "txtBox3";
             this.txtBox3.Size = new System.Drawing.Size(200, 19);
             this.txtBox3.TabIndex = 21;
-            this.txtBox3.TextChanged += new System.EventHandler(this.txtBox3_TextChanged);
             // 
             // chkbox1
             // 

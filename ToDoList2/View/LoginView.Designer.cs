@@ -32,7 +32,7 @@
             this.chkbox1 = new System.Windows.Forms.CheckBox();
             this.txtBox3 = new System.Windows.Forms.TextBox();
             this.txtbox2 = new System.Windows.Forms.TextBox();
-            this.btn1 = new System.Windows.Forms.Button();
+            this.btnLogin = new System.Windows.Forms.Button();
             this.lbl4 = new System.Windows.Forms.Label();
             this.lbl3 = new System.Windows.Forms.Label();
             this.txtbox1 = new System.Windows.Forms.TextBox();
@@ -71,17 +71,17 @@
             this.txtbox2.Size = new System.Drawing.Size(200, 19);
             this.txtbox2.TabIndex = 30;
             // 
-            // btn1
+            // btnLogin
             // 
-            this.btn1.BackColor = System.Drawing.Color.Transparent;
-            this.btn1.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn1.Location = new System.Drawing.Point(21, 375);
-            this.btn1.Name = "btn1";
-            this.btn1.Size = new System.Drawing.Size(140, 52);
-            this.btn1.TabIndex = 28;
-            this.btn1.Text = "Login ";
-            this.btn1.UseVisualStyleBackColor = false;
-            this.btn1.Click += new System.EventHandler(this.btn1_Click);
+            this.btnLogin.BackColor = System.Drawing.Color.Transparent;
+            this.btnLogin.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogin.Location = new System.Drawing.Point(21, 375);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(140, 52);
+            this.btnLogin.TabIndex = 28;
+            this.btnLogin.Text = "Login ";
+            this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // lbl4
             // 
@@ -155,7 +155,7 @@
             this.Controls.Add(this.chkbox1);
             this.Controls.Add(this.txtBox3);
             this.Controls.Add(this.txtbox2);
-            this.Controls.Add(this.btn1);
+            this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.lbl4);
             this.Controls.Add(this.lbl3);
             this.Controls.Add(this.txtbox1);
@@ -175,7 +175,7 @@
         private System.Windows.Forms.CheckBox chkbox1;
         private System.Windows.Forms.TextBox txtBox3;
         private System.Windows.Forms.TextBox txtbox2;
-        private System.Windows.Forms.Button btn1;
+        private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Label lbl4;
         private System.Windows.Forms.Label lbl3;
         private System.Windows.Forms.TextBox txtbox1;

@@ -36,28 +36,11 @@ namespace ToDoList2.View
                 txtBox3.Text = "";
             }
         }
-
-        private void txtbox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtbox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void btn2_Click(object sender, EventArgs e)
         {
             this.Hide();
             new LoginView().ShowDialog();
             this.Close();
-
         }
 
         private void chkbox1_CheckedChanged(object sender, EventArgs e)
@@ -70,26 +53,6 @@ namespace ToDoList2.View
             {
                 txtbox2.PasswordChar = '•';
             }   
-        }
-
-        private void lbl4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lbl3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lbl2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lbl1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
