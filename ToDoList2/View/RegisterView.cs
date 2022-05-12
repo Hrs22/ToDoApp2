@@ -7,89 +7,55 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ToDoList2.Controller;
 
 namespace ToDoList2.View
 {
     public partial class RegisterView : Form
     {
+        LoginController loginController = new LoginController();
         public RegisterView()
         {
             InitializeComponent();
         }
         private void btn1_Click(object sender, EventArgs e)
         {
-            if (txtbox1.Text == "" && txtbox2.Text == "" && txtBox3.Text == "")
+            if (txtUsername.Text == "" && txtPassword.Text == "" && txtEmail.Text == "")
             {
                 MessageBox.Show("Fields are empty!", "Registration Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 
             }
             else if (true)
             {
+                loginController.Register(txtUsername.Text, txtPassword.Text, txtEmail.Text);
                 MessageBox.Show("Account succsessfully created!");
                 MainView mv = new MainView();
                 this.Hide();
                 mv.ShowDialog();
                 this.Close();
 
-                txtbox1.Text = "";
-                txtbox2.Text = "";
-                txtBox3.Text = "";
+                txtUsername.Text = "";
+                txtPassword.Text = "";
+                txtEmail.Text = "";
             }
         }
-
-        private void txtbox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtbox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void btn2_Click(object sender, EventArgs e)
         {
             this.Hide();
             new LoginView().ShowDialog();
             this.Close();
-
         }
 
         private void chkbox1_CheckedChanged(object sender, EventArgs e)
         {
             if (chkbox1.Checked)
             {
-                txtbox2.PasswordChar = '\0';
+                txtPassword.PasswordChar = '\0';
             }
             else
             {
-                txtbox2.PasswordChar = '•';
+                txtPassword.PasswordChar = '•';
             }   
-        }
-
-        private void lbl4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lbl3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lbl2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lbl1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

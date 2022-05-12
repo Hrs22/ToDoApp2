@@ -30,12 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginView));
             this.chkbox1 = new System.Windows.Forms.CheckBox();
-            this.txtBox3 = new System.Windows.Forms.TextBox();
-            this.txtbox2 = new System.Windows.Forms.TextBox();
-            this.btn1 = new System.Windows.Forms.Button();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.btnLogin = new System.Windows.Forms.Button();
             this.lbl4 = new System.Windows.Forms.Label();
             this.lbl3 = new System.Windows.Forms.Label();
-            this.txtbox1 = new System.Windows.Forms.TextBox();
+            this.txtUsername = new System.Windows.Forms.TextBox();
             this.lbl2 = new System.Windows.Forms.Label();
             this.lbl1 = new System.Windows.Forms.Label();
             this.btn2 = new System.Windows.Forms.Button();
@@ -52,36 +52,38 @@
             this.chkbox1.TabIndex = 32;
             this.chkbox1.Text = "Show password";
             this.chkbox1.UseVisualStyleBackColor = true;
+            this.chkbox1.CheckedChanged += new System.EventHandler(this.chkbox1_CheckedChanged);
             // 
-            // txtBox3
+            // txtEmail
             // 
-            this.txtBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtBox3.Location = new System.Drawing.Point(93, 313);
-            this.txtBox3.Multiline = true;
-            this.txtBox3.Name = "txtBox3";
-            this.txtBox3.Size = new System.Drawing.Size(200, 19);
-            this.txtBox3.TabIndex = 31;
+            this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtEmail.Location = new System.Drawing.Point(93, 313);
+            this.txtEmail.Multiline = true;
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(200, 19);
+            this.txtEmail.TabIndex = 31;
             // 
-            // txtbox2
+            // txtPassword
             // 
-            this.txtbox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtbox2.Location = new System.Drawing.Point(93, 230);
-            this.txtbox2.Multiline = true;
-            this.txtbox2.Name = "txtbox2";
-            this.txtbox2.Size = new System.Drawing.Size(200, 19);
-            this.txtbox2.TabIndex = 30;
+            this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPassword.Location = new System.Drawing.Point(93, 230);
+            this.txtPassword.Multiline = true;
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '•';
+            this.txtPassword.Size = new System.Drawing.Size(200, 19);
+            this.txtPassword.TabIndex = 30;
             // 
-            // btn1
+            // btnLogin
             // 
-            this.btn1.BackColor = System.Drawing.Color.Transparent;
-            this.btn1.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn1.Location = new System.Drawing.Point(21, 375);
-            this.btn1.Name = "btn1";
-            this.btn1.Size = new System.Drawing.Size(140, 52);
-            this.btn1.TabIndex = 28;
-            this.btn1.Text = "Login ";
-            this.btn1.UseVisualStyleBackColor = false;
-            this.btn1.Click += new System.EventHandler(this.btn1_Click);
+            this.btnLogin.BackColor = System.Drawing.Color.Transparent;
+            this.btnLogin.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogin.Location = new System.Drawing.Point(21, 375);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(140, 52);
+            this.btnLogin.TabIndex = 28;
+            this.btnLogin.Text = "Login ";
+            this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // lbl4
             // 
@@ -104,14 +106,14 @@
             this.lbl3.TabIndex = 26;
             this.lbl3.Text = "Enter your password";
             // 
-            // txtbox1
+            // txtUsername
             // 
-            this.txtbox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtbox1.Location = new System.Drawing.Point(93, 143);
-            this.txtbox1.Multiline = true;
-            this.txtbox1.Name = "txtbox1";
-            this.txtbox1.Size = new System.Drawing.Size(200, 19);
-            this.txtbox1.TabIndex = 25;
+            this.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtUsername.Location = new System.Drawing.Point(93, 143);
+            this.txtUsername.Multiline = true;
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(200, 19);
+            this.txtUsername.TabIndex = 25;
             // 
             // lbl2
             // 
@@ -153,12 +155,12 @@
             this.ClientSize = new System.Drawing.Size(413, 450);
             this.Controls.Add(this.btn2);
             this.Controls.Add(this.chkbox1);
-            this.Controls.Add(this.txtBox3);
-            this.Controls.Add(this.txtbox2);
-            this.Controls.Add(this.btn1);
+            this.Controls.Add(this.txtEmail);
+            this.Controls.Add(this.txtPassword);
+            this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.lbl4);
             this.Controls.Add(this.lbl3);
-            this.Controls.Add(this.txtbox1);
+            this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.lbl2);
             this.Controls.Add(this.lbl1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -173,12 +175,12 @@
         #endregion
 
         private System.Windows.Forms.CheckBox chkbox1;
-        private System.Windows.Forms.TextBox txtBox3;
-        private System.Windows.Forms.TextBox txtbox2;
-        private System.Windows.Forms.Button btn1;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.TextBox txtPassword;
+        private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Label lbl4;
         private System.Windows.Forms.Label lbl3;
-        private System.Windows.Forms.TextBox txtbox1;
+        private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.Label lbl2;
         private System.Windows.Forms.Label lbl1;
         private System.Windows.Forms.Button btn2;
