@@ -23,6 +23,19 @@ namespace ToDoList2.Controller
                 return isLogged;
             }
         }
+
+        public bool IsUserAdmin(string username, string password, string email)
+        {
+            using (RegisterDBEntities log = new RegisterDBEntities())
+            {
+                bool isLogged = false;
+                if (username == "admin" && password == "admin" && email == "admin@gmail.com")
+                {
+                    isLogged = true;
+                }
+                return isLogged;
+            }
+        }
         public void Register(string username, string password, string email)
         {
             using (RegisterDBEntities log = new RegisterDBEntities())

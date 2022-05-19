@@ -22,6 +22,7 @@ namespace ToDoList2.View
         private void btnLogin_Click(object sender, EventArgs e)
         {
             var password = loginController.IsUserLogged(txtUsername.Text, txtPassword.Text, txtEmail.Text);
+            var adminPassword = loginController.IsUserAdmin(txtUsername.Text, txtPassword.Text, txtEmail.Text);
             if (password)
             {
                 MessageBox.Show("Succsesfully logged!");
@@ -30,6 +31,14 @@ namespace ToDoList2.View
                 mv.ShowDialog();
                 this.Close();
 
+            }
+            else if (adminPassword)
+            {
+                MessageBox.Show("Succsesfully logged into Admin!");
+                AdminView mv = new AdminView();
+                this.Hide();
+                mv.ShowDialog();
+                this.Close();
             }
             else
             {
