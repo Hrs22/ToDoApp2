@@ -42,7 +42,7 @@ namespace ToDoList2.View
             }
             else
             {
-                MessageBox.Show("No such user!");
+                
             }
            // if (txtbox1.Text == "" && txtbox2.Text == "" && txtBox3.Text == "")
           //  {
