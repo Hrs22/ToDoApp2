@@ -93,6 +93,12 @@
     <Compile Include="Model\TaskTable.cs">
       <DependentUpon>RegisterModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="View\AdminView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\AdminView.Designer.cs">
+      <DependentUpon>AdminView.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\LoginView.cs">
       <SubType>Form</SubType>
     </Compile>
