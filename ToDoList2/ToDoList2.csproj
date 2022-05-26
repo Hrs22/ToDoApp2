@@ -70,7 +70,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controller\GlobalData.cs" />
     <Compile Include="Controller\LoginController.cs" />
     <Compile Include="Model\RegisterModel.Context.cs">
       <AutoGen>True</AutoGen>
@@ -128,8 +127,14 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\AdminView.resx">
+      <DependentUpon>AdminView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\LoginView.resx">
       <DependentUpon>LoginView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\MainView.resx">
+      <DependentUpon>MainView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\RegisterView.resx">
       <DependentUpon>RegisterView.cs</DependentUpon>

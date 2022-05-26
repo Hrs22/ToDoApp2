@@ -65,6 +65,7 @@
             // txtUsername
             // 
             this.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtUsername.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsername.Location = new System.Drawing.Point(94, 139);
             this.txtUsername.Multiline = true;
             this.txtUsername.Name = "txtUsername";
@@ -119,6 +120,7 @@
             // txtPassword
             // 
             this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPassword.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.Location = new System.Drawing.Point(94, 226);
             this.txtPassword.Multiline = true;
             this.txtPassword.Name = "txtPassword";
@@ -129,6 +131,7 @@
             // txtEmail
             // 
             this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtEmail.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.Location = new System.Drawing.Point(94, 309);
             this.txtEmail.Multiline = true;
             this.txtEmail.Name = "txtEmail";
@@ -166,7 +169,8 @@
             this.Controls.Add(this.lbl1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "RegisterView";
-            this.Text = "RegisterView";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Register";
             this.ResumeLayout(false);
             this.PerformLayout();
 

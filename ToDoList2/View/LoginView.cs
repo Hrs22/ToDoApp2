@@ -21,18 +21,22 @@ namespace ToDoList2.View
         }
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            var password = loginController.IsUserLogged(txtUsername.Text, txtPassword.Text, txtEmail.Text);
+            var message = loginController.IsUserLogged(txtUsername.Text, txtPassword.Text, txtEmail.Text);
             var adminPassword = loginController.IsUserAdmin(txtUsername.Text, txtPassword.Text, txtEmail.Text);
-            if (password)
+            if (message == null)
             {
                 MessageBox.Show("Succsesfully logged!");
                 MainView mv = new MainView();
                 this.Hide();
                 mv.ShowDialog();
                 this.Close();
-
             }
-            else if (adminPassword)
+            else
+            {
+                MessageBox.Show(message);
+            }
+
+            if (adminPassword)
             {
                 MessageBox.Show("Succsesfully logged into Admin!");
                 AdminView mv = new AdminView();
@@ -40,14 +44,11 @@ namespace ToDoList2.View
                 mv.ShowDialog();
                 this.Close();
             }
-            else
+           /* else
             {
                 MessageBox.Show("No such user!");
             }
-           // if (txtbox1.Text == "" && txtbox2.Text == "" && txtBox3.Text == "")
-          //  {
-          //      MessageBox.Show("Fields are empty!", "Registration Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
-          //  }
+           */
         }
 
         private void chkbox1_CheckedChanged(object sender, EventArgs e)
@@ -60,6 +61,14 @@ namespace ToDoList2.View
             {
                 txtPassword.PasswordChar = '•';
             }
+        }
+
+        private void btn2_Click(object sender, EventArgs e)
+        {
+            RegisterView rg = new RegisterView();
+            this.Hide();
+            rg.ShowDialog();
+            this.Close();
         }
     }
 }
