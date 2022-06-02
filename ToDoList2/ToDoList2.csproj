@@ -75,6 +75,7 @@
     <Compile Include="Controller\CRUDController.cs" />
     <Compile Include="Controller\GlobalData.cs" />
     <Compile Include="Controller\LoginController.cs" />
+    <Compile Include="Controller\TasksController.cs" />
     <Compile Include="Model\RegisterModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -157,6 +158,7 @@
     </None>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\ToDoList2.Model.RegisterTable.datasource" />
+    <None Include="Properties\DataSources\ToDoList2.Model.TaskTable.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
