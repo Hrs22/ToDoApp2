@@ -21,9 +21,18 @@ namespace ToDoList2.View
         }
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            var message = loginController.IsUserLogged(txtUsername.Text, txtPassword.Text, txtEmail.Text);
+
             var adminPassword = loginController.IsUserAdmin(txtUsername.Text, txtPassword.Text, txtEmail.Text);
-            if (message == null)
+            var message = loginController.IsUserLogged(txtUsername.Text, txtPassword.Text, txtEmail.Text);
+            if (adminPassword)
+            {
+                MessageBox.Show("Succsesfully logged into Admin!");
+                AdminView mv = new AdminView();
+                this.Hide();
+                mv.ShowDialog();
+                this.Close();
+            }
+            else if (message == null)
             {
                 MessageBox.Show("Succsesfully logged!");
                 MainView mv = new MainView();
@@ -35,20 +44,6 @@ namespace ToDoList2.View
             {
                 MessageBox.Show(message);
             }
-
-            if (adminPassword)
-            {
-                MessageBox.Show("Succsesfully logged into Admin!");
-                AdminView mv = new AdminView();
-                this.Hide();
-                mv.ShowDialog();
-                this.Close();
-            }
-           /* else
-            {
-                MessageBox.Show("No such user!");
-            }
-           */
         }
 
         private void chkbox1_CheckedChanged(object sender, EventArgs e)
