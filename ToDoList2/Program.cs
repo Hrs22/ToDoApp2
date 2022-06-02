@@ -17,7 +17,8 @@ namespace ToDoList2
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new RegisterView());
+            //Application.Run(new RegisterView());
+            Application.Run(new AdminView());
         }
     }
 }
