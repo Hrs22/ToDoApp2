@@ -14,20 +14,20 @@ namespace ToDoList2.View
     public partial class RegisterView : Form
     {
         LoginController loginController = new LoginController();
+        CRUDController crudController = new CRUDController();
         public RegisterView()
         {
             InitializeComponent();
         }
         private void btn1_Click(object sender, EventArgs e)
         {
-            if (txtUsername.Text == "" && txtPassword.Text == "" && txtEmail.Text == "")
+            if (txtUsername.Text == "" || txtPassword.Text == "" || txtEmail.Text == "")
             {
                 MessageBox.Show("Fields are empty!", "Registration Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                
             }
             else if (true)
             {
-                loginController.Register(txtUsername.Text, txtPassword.Text, txtEmail.Text);
+                crudController.Register(txtUsername.Text, txtPassword.Text, txtEmail.Text);
                 MessageBox.Show("Account succsessfully created!");
                 MainView mv = new MainView();
                 this.Hide();
