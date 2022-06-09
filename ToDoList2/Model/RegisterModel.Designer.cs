@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\Users\PC08-204\Source\Repos\Hrs22\ToDoApp2\ToDoList2\Model\RegisterModel.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\Users\PC09-204\source\repos\ToDoApp2\ToDoList2\ToDoList2\Model\RegisterModel.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

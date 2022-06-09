@@ -23,18 +23,18 @@ namespace ToDoList2
         private void btnTask_Click(object sender, EventArgs e)
         {
             TaskTable task = new TaskTable();
-            task.name = txtBoxTaskName.Text;
-            task.description = txtBoxTaskDesc.Text;
+            task.taskName = txtBoxTaskName.Text;
+            task.taskDescription = txtBoxTaskDesc.Text;
             taskController.AddTask(task);
-            dataGridView1.DataSource = taskController.GetAll();
+            dgv.DataSource = taskController.GetAll();
         }
 
         private void btnClearTask_Click(object sender, EventArgs e)
         {
-            DataGridViewRow row = dataGridView1.CurrentRow;
-            int id = int.Parse(row.Cells[""].Value.ToString());
+            DataGridViewRow row = dgv.CurrentRow;
+            int id = int.Parse(row.Cells[0].Value.ToString());
             taskController.ClearTask(id);
-            dataGridView1.DataSource = taskController.GetAll();
+            dgv.DataSource = taskController.GetAll();
         }
     }
 }

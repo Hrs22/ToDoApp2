@@ -8,6 +8,6 @@ namespace ToDoList2.Controller
 {
     internal class GlobalData
     {
-        public static int CurrentUserId = 0;
+        public static int CurrentUserId = 1;
     }
 }
