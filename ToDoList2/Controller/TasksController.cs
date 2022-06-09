@@ -20,7 +20,15 @@ namespace ToDoList2.Controller
         {
             using(RegisterDBEntities tsk = new RegisterDBEntities())
             {
-                task.Id = tsk.TaskTables.ToList().LastOrDefault().Id + 1;
+                if (tsk.TaskTables.ToList().LastOrDefault() == null)
+                {
+                    task.Id = 0;
+                }
+                else
+                {
+                    task.Id = tsk.TaskTables.ToList().LastOrDefault().Id + 1;
+                }
+                task.RegisterID = GlobalData.CurrentUserId;
                 tsk.TaskTables.Add(task);
                 tsk.SaveChanges();
             }

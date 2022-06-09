@@ -38,18 +38,13 @@
             this.lblCompl = new System.Windows.Forms.Label();
             this.btnTask = new System.Windows.Forms.Button();
             this.btnClearTask = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgv = new System.Windows.Forms.DataGridView();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.taskNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.taskDescriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.registerIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.registerTableDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.taskTableBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.taskTableBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.taskTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.taskTableBindingSource2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.taskTableBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.taskTableBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -113,7 +108,7 @@
             // btnTask
             // 
             this.btnTask.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTask.Location = new System.Drawing.Point(97, 160);
+            this.btnTask.Location = new System.Drawing.Point(100, 171);
             this.btnTask.Name = "btnTask";
             this.btnTask.Size = new System.Drawing.Size(100, 73);
             this.btnTask.TabIndex = 2;
@@ -124,7 +119,7 @@
             // btnClearTask
             // 
             this.btnClearTask.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClearTask.Location = new System.Drawing.Point(395, 267);
+            this.btnClearTask.Location = new System.Drawing.Point(395, 258);
             this.btnClearTask.Name = "btnClearTask";
             this.btnClearTask.Size = new System.Drawing.Size(107, 44);
             this.btnClearTask.TabIndex = 8;
@@ -132,21 +127,20 @@
             this.btnClearTask.UseVisualStyleBackColor = true;
             this.btnClearTask.Click += new System.EventHandler(this.btnClearTask_Click);
             // 
-            // dataGridView1
+            // dgv
             // 
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgv.AutoGenerateColumns = false;
+            this.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idDataGridViewTextBoxColumn,
-            this.nameDataGridViewTextBoxColumn,
-            this.descriptionDataGridViewTextBoxColumn,
-            this.registerIDDataGridViewTextBoxColumn,
-            this.registerTableDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.taskTableBindingSource2;
-            this.dataGridView1.Location = new System.Drawing.Point(318, 69);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(245, 164);
-            this.dataGridView1.TabIndex = 9;
+            this.taskNameDataGridViewTextBoxColumn,
+            this.taskDescriptionDataGridViewTextBoxColumn,
+            this.registerIDDataGridViewTextBoxColumn});
+            this.dgv.DataSource = this.taskTableBindingSource;
+            this.dgv.Location = new System.Drawing.Point(318, 69);
+            this.dgv.Name = "dgv";
+            this.dgv.Size = new System.Drawing.Size(245, 164);
+            this.dgv.TabIndex = 9;
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -155,17 +149,17 @@
             this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
             this.idDataGridViewTextBoxColumn.Visible = false;
             // 
-            // nameDataGridViewTextBoxColumn
+            // taskNameDataGridViewTextBoxColumn
             // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "taskName";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.taskNameDataGridViewTextBoxColumn.DataPropertyName = "taskName";
+            this.taskNameDataGridViewTextBoxColumn.HeaderText = "Name";
+            this.taskNameDataGridViewTextBoxColumn.Name = "taskNameDataGridViewTextBoxColumn";
             // 
-            // descriptionDataGridViewTextBoxColumn
+            // taskDescriptionDataGridViewTextBoxColumn
             // 
-            this.descriptionDataGridViewTextBoxColumn.DataPropertyName = "description";
-            this.descriptionDataGridViewTextBoxColumn.HeaderText = "taskDescription";
-            this.descriptionDataGridViewTextBoxColumn.Name = "descriptionDataGridViewTextBoxColumn";
+            this.taskDescriptionDataGridViewTextBoxColumn.DataPropertyName = "taskDescription";
+            this.taskDescriptionDataGridViewTextBoxColumn.HeaderText = "Description";
+            this.taskDescriptionDataGridViewTextBoxColumn.Name = "taskDescriptionDataGridViewTextBoxColumn";
             // 
             // registerIDDataGridViewTextBoxColumn
             // 
@@ -173,21 +167,6 @@
             this.registerIDDataGridViewTextBoxColumn.HeaderText = "RegisterID";
             this.registerIDDataGridViewTextBoxColumn.Name = "registerIDDataGridViewTextBoxColumn";
             this.registerIDDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // registerTableDataGridViewTextBoxColumn
-            // 
-            this.registerTableDataGridViewTextBoxColumn.DataPropertyName = "RegisterTable";
-            this.registerTableDataGridViewTextBoxColumn.HeaderText = "RegisterTable";
-            this.registerTableDataGridViewTextBoxColumn.Name = "registerTableDataGridViewTextBoxColumn";
-            this.registerTableDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // taskTableBindingSource2
-            // 
-            this.taskTableBindingSource2.DataSource = typeof(ToDoList2.Model.TaskTable);
-            // 
-            // taskTableBindingSource1
-            // 
-            this.taskTableBindingSource1.DataSource = typeof(ToDoList2.Model.TaskTable);
             // 
             // taskTableBindingSource
             // 
@@ -199,7 +178,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(612, 321);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgv);
             this.Controls.Add(this.btnClearTask);
             this.Controls.Add(this.lblCompl);
             this.Controls.Add(this.lblDiscription);
@@ -212,9 +191,7 @@
             this.Name = "MainView";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ToDoApp";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.taskTableBindingSource2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.taskTableBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.taskTableBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -226,20 +203,17 @@
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.TextBox txtBoxTaskName;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.BindingSource taskTableBindingSource;
-        private System.Windows.Forms.BindingSource taskTableBindingSource1;
         private System.Windows.Forms.TextBox txtBoxTaskDesc;
         private System.Windows.Forms.Label lblDiscription;
         private System.Windows.Forms.Label lblCompl;
         private System.Windows.Forms.Button btnTask;
         private System.Windows.Forms.Button btnClearTask;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.BindingSource taskTableBindingSource2;
+        private System.Windows.Forms.DataGridView dgv;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn descriptionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn taskNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn taskDescriptionDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn registerIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn registerTableDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource taskTableBindingSource;
     }
 }
 

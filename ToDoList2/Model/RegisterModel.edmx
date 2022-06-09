@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="RegisterDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="RegisterDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="RegisterTable">
           <Key>
             <PropertyRef Name="Id" />
@@ -19,11 +19,11 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="int" Nullable="false" />
-          <Property Name="name" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="description" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="taskName" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="taskDescription" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="RegisterID" Type="int" Nullable="false" />
         </EntityType>
-        <Association Name="FK__TaskTable__Regis__49C3F6B7">
+        <Association Name="FK__TaskTable__Regis__5CD6CB2B">
           <End Role="RegisterTable" Type="Self.RegisterTable" Multiplicity="1" />
           <End Role="TaskTable" Type="Self.TaskTable" Multiplicity="*" />
           <ReferentialConstraint>
@@ -38,13 +38,12 @@
         <EntityContainer Name="RegisterDBModelStoreContainer">
           <EntitySet Name="RegisterTable" EntityType="Self.RegisterTable" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TaskTable" EntityType="Self.TaskTable" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK__TaskTable__Regis__49C3F6B7" Association="Self.FK__TaskTable__Regis__49C3F6B7">
+          <AssociationSet Name="FK__TaskTable__Regis__5CD6CB2B" Association="Self.FK__TaskTable__Regis__5CD6CB2B">
             <End Role="RegisterTable" EntitySet="RegisterTable" />
             <End Role="TaskTable" EntitySet="TaskTable" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="RegisterDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -63,10 +62,10 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" />
-          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="description" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="RegisterID" Type="Int32" Nullable="false" />
           <NavigationProperty Name="RegisterTable" Relationship="Self.FK__TaskTable__Regis__49C3F6B7" FromRole="TaskTable" ToRole="RegisterTable" />
+          <Property Name="taskName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="taskDescription" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
         </EntityType>
         <Association Name="FK__TaskTable__Regis__49C3F6B7">
           <End Role="RegisterTable" Type="Self.RegisterTable" Multiplicity="1" />
@@ -107,9 +106,9 @@
           <EntitySetMapping Name="TaskTables">
             <EntityTypeMapping TypeName="RegisterDBModel.TaskTable">
               <MappingFragment StoreEntitySet="TaskTable">
+                <ScalarProperty Name="taskDescription" ColumnName="taskDescription" />
+                <ScalarProperty Name="taskName" ColumnName="taskName" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="name" ColumnName="name" />
-                <ScalarProperty Name="description" ColumnName="description" />
                 <ScalarProperty Name="RegisterID" ColumnName="RegisterID" />
               </MappingFragment>
             </EntityTypeMapping>

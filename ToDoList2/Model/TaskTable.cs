@@ -15,8 +15,8 @@ namespace ToDoList2.Model
     public partial class TaskTable
     {
         public int Id { get; set; }
-        public string name { get; set; }
-        public string description { get; set; }
+        public string taskName { get; set; }
+        public string taskDescription { get; set; }
         public int RegisterID { get; set; }
     
         public virtual RegisterTable RegisterTable { get; set; }
